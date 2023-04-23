@@ -1,0 +1,49 @@
+x3
+<form></form>
+	využívá se pro tvorbu formulářů
+		<form action="welcome_get.php" method="get">		// vyhradí si část webu, kde se nachází formulář, action se využívá, pokud je php na jiném souboru, method pro sběr dat z formuláře
+			jméno: <input type="text" name="jmeno"><br>		// kolonka, do které lze zadat data, buď textová (text) nebo číselná (number)
+			<input type="submit">							// button, odešle data z formuláře
+		</form>
+ 
+mysqli_connect
+	napojení na databázi přes PHP:
+		$servername = "localhost";
+                $username = "zubik1000cz";
+                $password = "qwertzuI9";
+                $database = "zubik1000cz";
+                $conn = mysqli_connect($servername, $username, $password, $database);
+
+mysqli_query($conn,$sql);
+	připojí se na server ($conn) a odešle mu příkaz ($sql) (zde konkrétně vytvoří tabulku a v ní vytvoří atrributy id, jméno a věk
+		$sql="CREATE TABLE tabulka (
+                            	id INT(5) AUTO_INCREMENT PRIMARY KEY,
+        			jmeno VARCHAR(20) NOT NULL,
+        			vek INT(3) NOT NULL
+        		)";
+                            )";
+        	mysqli_query($conn,$sql);
+
+$_POST["jmeno"]  $_GET["jmeno"]
+	využívá se pro vybrání hodnoty z formuláře
+	superglobální proměnné - předdefinované pole
+		$jmeno = $_POST["jmeno"];		//vezme jméno z formuláře a vloží do proměnné $jmeno
+
+fopen
+	otevře soubor file.txt a uloží jej do proměnné $file
+		$file = fopen("file.txt", "w") or die("Nejde otevřít soubor!");
+
+fclose
+	zavře soubor
+		fclose($file);
+
+fread
+	přečte celý soubor $file
+		fread($file, r)
+fwrite
+	zapíše data do souboru $file
+		fwrite($file, $data);
+
+echo()
+	vypíše obsah závorky
+		echo ("počet Liků: ".$likeCount.'<br>');
