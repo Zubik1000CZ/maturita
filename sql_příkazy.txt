@@ -1,0 +1,46 @@
+CREATE TABLE Seznam			  	- vytvoří tabulku
+
+INSERT INTO Seznam (Jmeno, Prijmeni)  		- používá se pro vložení do tabulky
+VALUES('Radim','Starý'); 		  	- používá se pro vložení konkrétních hodnot
+
+
+INSERT INTO <jméno tabulky> (<jmeno>,<prijmeni>)
+VALUES('<konretni hodnoty jmena>','<konretni hodnoty prijmeni>')
+
+
+ALTER TABLE Seznam				- využívá se pro přidání dalších atributů do tabulky
+ADD DatumNarozeni date;				- přidá konkrétní atribut včetně parametru atributu
+
+
+UPDATE Seznam					- při přidání atributu se využívá pro aktualizaci dat pro danou entitu
+SET DatumNarozeni = '12.12.2022'
+
+
+DELETE FROM Seznam WHERE Jmeno='Pepa';		- smaže Pepu z tabulky Seznam
+
+
+DROP TABLE Seznam;				- smaže tabulku
+
+
+DOTAZY
+
+
+vybrání dat
+
+SELECT [Jmeno],[Prijmeni]			- využívá se pro vybrání dat z tabulky
+FROM [19ib31_zoufaly].[dbo].[Seznam]	
+
+
+
+vybrání dat 
+
+WHERE Jmeno ="Pepa";				- vybere z atributu Jmeno všechny, kteří se jmenují "Pepa", nutno mít "SELECT FROM..." 
+
+
+srovnávání
+
+ORDER BY Jmeno;					- vzestupně porovnává
+
+ORDER BY Jmeno DESC;				- sestupně porovnává
+
+
