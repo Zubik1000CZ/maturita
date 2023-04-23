@@ -1,0 +1,41 @@
+https://www.iqrf.org/
+web s návodem: https://github.com/iqrfsdk/iot-starter-kit/blob/master/install/rpi-board/GW-SbS-INSTALL.md
+web s PHP: https://docs.iqrf.org/iqrf-gateway/user/webapp/installation.html
+
+U:\klima\2022-2023\EPO\IQRF\IQRF_basic.pps
+
+IQRF 
+	bezdrátová technologie
+	mesh technologie
+	využívá bezlicenční rádiové pásmo
+
+	využívá IoT
+
+	možnost implementace do jiných technologií
+
+	použití
+		automatizace budov, skladů, vytápění, pouličního osvětlení
+
+	vždy v síti jeden coordinátor ke kterému se připojují nodi
+	
+	až 240 zařízení včetně koordinátora
+
+
+	
+	transceiver
+		malá deska s obvody potřebnými pro implementaci RF konektivity
+
+		vysílač/přijímač
+		paměť pro uživatelská data
+
+	operační systém
+		napsaný v Cčku
+
+	DPA příkaz
+		vyšší komunikační vrstva nad IQRF OS, se sítí IQMESH
+		IDE s GUI
+
+	GW Daemon
+		umožnuje vytvořit IQRF bránu s připojením k internetu
+		obvykle běží na Raspberry Pi, Up Boardu, Linux PlugPC
+
